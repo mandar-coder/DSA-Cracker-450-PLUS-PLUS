@@ -3,12 +3,17 @@
 using namespace std;
 
 bool subarraycheck(int arr[],int n){
+        // starting point of the sub arrray and
+        // sum is initialized with first element of subarray
+        // a[i]
     for(int i=0;i<n;i++){
         int sum = arr[i];
         if(sum == 0){
             return true;
         }
-    for(int j=j+1;j<n;j++){
+        // we are finding the sum till jth index
+        // starting from ith index
+        for(int j=i + 1;j<n;j++){
         sum += arr[j];
         if(sum == 0){
             return true;
